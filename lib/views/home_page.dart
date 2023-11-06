@@ -16,8 +16,8 @@ class HomePage extends StatelessWidget {
           Column(
             children: [
               Padding(
-                padding:
-                    const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 60),
+                padding: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 60),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -61,22 +61,19 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 25,right: 25,bottom: 40),
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 40),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                      onTap: (){
-
-                      },
+                      onTap: () {},
                       child: Container(
                         alignment: Alignment.center,
                         height: 32,
                         width: 140,
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade100,
-                          borderRadius: BorderRadius.circular(15)
-                        ),
+                            color: Colors.grey.shade100,
+                            borderRadius: BorderRadius.circular(15)),
                         child: const Text(
                           'Categories',
                           style: TextStyle(fontSize: 17),
@@ -84,20 +81,18 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const CourseMarketing()),);
-                      },
+                      onTap: () {},
                       child: Container(
                         alignment: Alignment.center,
                         height: 32,
                         width: 140,
                         decoration: BoxDecoration(
                             color: Color(0xFFA2BDE8),
-                            borderRadius: BorderRadius.circular(15)
-                        ),
+                            borderRadius: BorderRadius.circular(15)),
                         child: const Text(
                           'See All',
-                          style: TextStyle(fontSize: 17,color: Color(0xFFF9FAFE)),
+                          style:
+                              TextStyle(fontSize: 17, color: Color(0xFFF9FAFE)),
                         ),
                       ),
                     ),
@@ -106,22 +101,36 @@ class HomePage extends StatelessWidget {
               ),
               // Courses(assetsImage: 'assets/images/2A.png')
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 13,),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 13,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Courses(imagesUrl: 'assets/images/2A.png',),
-                    Courses(imagesUrl: 'assets/images/2B.png',),
+                    Courses(
+                      imagesUrl: 'assets/images/2A.png',
+                    ),
+                    InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const CourseMarketing()),);
+                        },
+                        child: Courses(
+                          imagesUrl: 'assets/images/2B.png',
+                        )),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 13,right: 13,top: 50),
+                padding: const EdgeInsets.only(left: 13, right: 13, top: 50),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Courses(imagesUrl: 'assets/images/2C.png',),
-                    Courses(imagesUrl: 'assets/images/2D.png',),
+                    Courses(
+                      imagesUrl: 'assets/images/2C.png',
+                    ),
+                    Courses(
+                      imagesUrl: 'assets/images/2D.png',
+                    ),
                   ],
                 ),
               ),

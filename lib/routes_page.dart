@@ -1,3 +1,4 @@
+import 'package:courses_learning/views/course_marketing.dart';
 import 'package:courses_learning/views/favorith_page.dart';
 import 'package:courses_learning/views/home_page.dart';
 import 'package:courses_learning/views/notifycation_page.dart';
@@ -18,7 +19,8 @@ class _RoutesPageState extends State<RoutesPage> {
     const HomePage(),
     const NotifitcationPage(),
     const FavorithPage(),
-    const SearchPage()
+    const SearchPage(),
+    const CourseMarketing()
   ];
 
 
@@ -48,7 +50,7 @@ class _RoutesPageState extends State<RoutesPage> {
               },
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
-              child: Container(
+              child:  SizedBox(
                 width: MediaQuery.of(context).size.width * .25,
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 20),
